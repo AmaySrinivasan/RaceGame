@@ -11,10 +11,10 @@ public class Car {
     private static final int Y_POSITION = 600;
     // Pre-defined x-values for the lanes
     private final int[] laneX = {50, 160, 260, 360, 485};
+    // The car image
+    private final Image image;
     // Current lane of the car
     private int lane;
-    // The car image
-    private Image image;
 
     // Constructer to construct car image using the given car image (From resources)
     public Car(Image image) {

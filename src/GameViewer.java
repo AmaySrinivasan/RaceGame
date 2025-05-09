@@ -1,22 +1,24 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 // Highway Dodge by Amay Srinivasan
 // The class for the front end and GUI, involving the window, animation, and inputs
 public class GameViewer extends JFrame implements KeyListener, ActionListener {
     private static final int WINDOW_WIDTH = 600;
     private static final int WINDOW_HEIGHT = 800;
-    private static final int BACKGROUND_SCROLL_SPEED = 800;
     private static final int FONT_SIZE = 20;
     private static final int DELAY = 20;
-    private Image background;
-    private Image raceCar;
-    private Image obstacle;
-    private Game game;
+    private final Image background;
+    private final Image raceCar;
+    private final Image obstacle;
+    private final Game game;
+    private final Timer timer;
     public int backgroundy1 = 0;
     public int backgroundy2 = -WINDOW_HEIGHT;
-    private Timer timer;
 
     // Constructor to set up the game window, the images, the game logic, and to have
     // the game loop start
